@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Solution Scraper",
+  "version": "0.0.0",
+  "icons": {
+    "128": "assets/icons/tool.png"
+  },
+  "description": "Explore the top-rated solutions without the need for manual search",
+  "permissions": [
+    "webNavigation"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "background": {
+    "scripts": [
+      "js/background.bundle.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gitlab.com/gitlab-org/gitlab/-/issues/*"],
+      "js": ["js/contentScript.bundle.js"],
+      "css": ["css/contentScript.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "__firefox__browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "54.0"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+#sidebar__container {
+    max-width: 200px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#sidebar__container > div {
+    max-height: 150px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+#sidebar__container > div >p {
+    margin-bottom: 5px;
+    overflow: hidden;
+    max-height: 95px;
+}
+
+#sidebar__container.hidden {
+    display: none;
+}
+
+.btn__custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn__custom > button {
+    max-width: 100%;
+    height: auto;
+}
